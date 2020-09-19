@@ -32,7 +32,7 @@ function jal_install_data() {
 	$results = $wpdb->get_results("SELECT * FROM $table_name");
 	
 	$tam = 1;
-	while ($tam <= 3) {
+	while ($tam <= 11) {
 		// Insert data
 		$wpdb->insert($table_name, array(
 			'contador' => 0
