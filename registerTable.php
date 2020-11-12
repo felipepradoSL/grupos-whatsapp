@@ -31,13 +31,13 @@ function jal_install_data() {
 	// Query the existence of row
 	$results = $wpdb->get_results("SELECT * FROM $table_name");
 	
-	$tam = 1;
-	while ($tam <= 11) {
+	$tam = 25;
+	while ($tam >=0) {
 		// Insert data
 		$wpdb->insert($table_name, array(
 			'contador' => 0
 		));
-		$tam++;
+		$tam--;
 	}
 
 	$results1 = $wpdb->get_row("SELECT * FROM $table_name WHERE id = 1");
